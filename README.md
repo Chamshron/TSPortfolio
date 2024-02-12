@@ -4,6 +4,7 @@ Aim: To create a Typescript portfolio website where an user can download my CV, 
 
 Goals:
 1. Learn more about Typescript
+2. Learn more about Tailwind CSS and how screensize influences styling
 
 
 Get the App Running:
