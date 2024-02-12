@@ -1,4 +1,6 @@
 import React from "react";
+import subwaySamurai from "@/public/SubwaySamurai.png";
+import navigate from "@/public/Navigate.png";
 
 export const links = [
     {
