@@ -12,7 +12,8 @@ export default function Project({
     tags,
     imageUrl,
     githubURL
-}: ProjectProps) {
+}: ProjectProps)
+ {
   
     return (
     <motion.div
