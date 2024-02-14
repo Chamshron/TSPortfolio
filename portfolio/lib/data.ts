@@ -28,3 +28,20 @@ export const links = [
         hash:"#contact",
     },
  ] as const;
+
+ export const projectsData = [
+    {
+        title: "Subway Samurai",
+        description:"A platformer/turn-based game set in Glasgow.",
+        tags:["React", "JavaScript", "HowlerJS", "CSS", "Java", "Spring", "Insomnia", "Postico"],
+        imageUrl: subwaySamurai,
+        githubURL:"https://github.com/Dannycarey23/SubwaySamurai_frontend",
+    },
+    {
+        title: "Navigate - Helping People Find Shelter",
+        description:"Internal, location-data and management application for the social services in Glasgow.",
+        tags:["React", "JavaScript", "ArcGIS", "Express", "MongoDB"],
+        imageUrl: navigate,
+        githubURL:"https://github.com/markmcgrory/navigate_app",
+    }
+ ] as const;

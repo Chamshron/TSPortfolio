@@ -47,7 +47,7 @@ export default function Intro() {
         >
                 <span className='font-bold'> {`Hi, I'm Emma.`}</span> {`I'm a`} {" "}
                 <span className='font-bold'>full-stack developer</span> with a background in CRM customer support. I enjoy buildings
-                <span className='italic'> sites & apps </span>.
+                <span className='italic'> sites & apps</span>.
             </motion.p>
             <motion.div 
             className=' flex flex-col sm:flex-row  items-center justify-center gap-3 px-4 text-lg font-medium'
