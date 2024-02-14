@@ -12,7 +12,7 @@ Packages Used:
 2. Framer Motion (animations)
 
 What I've Learned:
-1. Framer Motion & Tailwind CSS: I had centered the header using left-1/2 however, that meant the header component started at the center mark, the item was not centered itself. Using -translate-x-1/2 I was center the component however, when I used Framer Motion, the X value was reset so needed to set the x value to "-50%" to ensure the item was centered and not off-centre.
+1. Framer Motion & Tailwind CSS: I had centered the header using left-1/2 however, that meant the header component started at the center mark, the item was not centered itself. Using -translate-x-1/2 I was center the component however, when I used Framer Motion, the X value was reset so needed to set the x value to "-50%" to ensure the item was centered and not off-centre. Additionally, using group so that I can animate an icon seperately when a button is hovered over. 
 
 Get the App Running:
 1. Within the portfolio folder, type into the terminal:npm install
