@@ -8,6 +8,8 @@ import {HiDownload} from "react-icons/hi";
 import {FaGithubSquare} from "react-icons/fa";
 
 export default function Intro() {
+    
+
   return (
     <section 
     className=' mb-28 max-w-[50rem] text-center scroll-mt-[100rem] sm:mb-0'
