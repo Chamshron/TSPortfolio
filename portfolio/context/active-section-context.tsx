@@ -42,7 +42,7 @@ export function useActiveSectionContext() {
 
   if (context === null) {
     throw new Error(
-      "Uh Oh! : ( Issue: useActiveSectionContext must be used within an ActiveSectionContextProvider"
+      "Uh Oh! 😱😭 Issue: useActiveSectionContext must be used within an ActiveSectionContextProvider"
     );
   }
 
