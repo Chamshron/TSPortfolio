@@ -2,7 +2,6 @@ import React from "react";
 import subwaySamurai from "@/public/SubwaySamurai.png";
 import navigate from "@/public/Navigate.png";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
 export const links = [
@@ -90,8 +89,8 @@ export const links = [
       title: "Customer Support Associate Specalist",
       location: "Blackbaud",
       description:
-        "After joining Blackbaud in 2021, I went from a Customer Support Associate to an Associate Specialist for the North American region supporting the CRM the Raiser’s Edge/RE NXT. During my time I had many responsibilities, below are my most recent responsibilities. .",
-      icon: React.createElement(FaReact),
+        "After joining Blackbaud in 2021, I went from a Customer Support Associate to an Associate Specialist for the North American region supporting the CRM the Raisers Edge/RE NXT. During my time I had many responsibilities, below are my most recent responsibilities.",
+      icon: React.createElement(CgWorkAlt),
       date: "April 2021 - April 2022",
     },
   ] as const;
