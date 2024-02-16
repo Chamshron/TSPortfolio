@@ -45,3 +45,23 @@ export const links = [
         githubURL:"https://github.com/markmcgrory/navigate_app",
     }
  ] as const;
+
+ export const skillsData = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Git",
+    "Tailwind",
+    "MongoDB",
+    "Python",
+    "PostgreSQL",
+    "Express",
+    "Framer Motion",
+    "Java",
+    "Cypress",
+    "Jester",
+    "Mocha"
+ ] as const;
