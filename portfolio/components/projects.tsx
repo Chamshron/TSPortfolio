@@ -2,20 +2,10 @@
 import React, {useEffect} from 'react';
 import { projectsData } from '@/lib/data';
 import Project from './project';
-import { useActiveSectionContext } from '@/context/active-section-context';
-import { useInView } from 'react-intersection-observer';
+import { useSectionInView } from '@/lib/hooks';
 
 export default function Projects(){
-  const {activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-  const {ref, inView} = useInView({
-    threshold: 0.5,
-  });
-
-  useEffect(() => {
-    if(inView){
-      setActiveSection("Projects");
-     } 
-  }, [inView, setActiveSection]);
+  const {ref} = useSectionInView("Projects");
 
   return (
     <section className=' scroll-mt-12 mb-28'

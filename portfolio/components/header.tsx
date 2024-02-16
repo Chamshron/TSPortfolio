@@ -26,7 +26,10 @@ export default function Header() {
                     key={link.hash}>
                         <Link className={clsx('flex w-full items-center justify-center px-3 py-3 hover:text-indigo-950 transition hover:font-bold', {"text-gray-950": activeSection === link.name})}
                         href={link.hash}
-                        onClick={()=> setActiveSection(link.name)}
+                        onClick={()=> {
+                            setActiveSection(link.name)
+                            setTimeOfLastClick(Date.now())
+                        }}
                         >
                         {link.name}
                         {link.name === activeSection && (<motion.span className=' bg-gray-100 rounded-full absolute inset-0 -z-10'
