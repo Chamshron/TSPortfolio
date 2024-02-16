@@ -12,7 +12,9 @@ Packages Used:
 2. Framer Motion (animations)
 
 What I've Learned:
-1. Framer Motion & Tailwind CSS: I had centered the header using left-1/2 however, that meant the header component started at the center mark, the item was not centered itself. Using -translate-x-1/2 I was center the component however, when I used Framer Motion, the X value was reset so needed to set the x value to "-50%" to ensure the item was centered and not off-centre. Additionally, using group so that I can animate an icon seperately when a button is hovered over. 
+1. Framer Motion & Tailwind CSS: I had centered the header using left-1/2 however, that meant the header component started at the center mark, the item was not centered itself. Using -translate-x-1/2 I was center the component however, when I used Framer Motion, the X value was reset so needed to set the x value to "-50%" to ensure the item was centered and not off-centre. Additionally, using group so that I can animate an icon seperately when a button is hovered over.
+2. When working on the header and having the active section highlighted, I encountered an issue with the onClick event and scrolling inView conflicting with eachother; example being that when I selected About, since Projects were in view it was highlighting Projects instead of About. I created a useState for timeOfLastClick and setTimeOfLastClick so that I could create be more specific in my if statement that would determine which section would be active/highlighted.
+3. I was reusing a lot of the same code on multiple different compnents to set the active section so to reduce repition I decided to create a custom hook instead. 
 
 Get the App Running:
 1. Within the portfolio folder, type into the terminal:npm install
