@@ -75,7 +75,7 @@ export const links = [
       description:
         "I graduated after 16 weeks of intensive studying. I completed over 800 hours worth of hands-on coding, through both solo and group projects.",
       icon: React.createElement(LuGraduationCap),
-      date: "2019",
+      date: "Nov 2023",
     },
     {
       title: "Customer Support Staff",
