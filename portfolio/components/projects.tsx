@@ -1,5 +1,5 @@
 "use client";
-import React, {useEffect} from 'react';
+import React from 'react';
 import { projectsData } from '@/lib/data';
 import Project from './project';
 import { useSectionInView } from '@/lib/hooks';
