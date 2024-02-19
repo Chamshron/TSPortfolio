@@ -35,7 +35,7 @@ export default function Contact() {
         <h2 className='font-medium text-3xl mb-3 text-center'>Contact Me</h2>
         <p className=' text-gray-700'>Please contact me directly at <a className='underline' href='mailto:emmacameron219@gmail.com'>emmacameron219@gmail.com</a>  or through this form.</p>
         <form className=' flex flex-col mt-10'
-        action={ async (formData) => {
+        action={ async formData => {
             await sendEmail(formData);
         }}
         >
