@@ -6,6 +6,14 @@ import {motion} from "framer-motion";
 
 export default function Contact() {
     const {ref} = useSectionInView("Contact");
+
+    const senderEmail = async (formData : FormData) => {
+        "use server";
+        console.log("Running on server");
+        console.log(formData.get("senderEmail"));
+        console.log(formData.get("senderMessage"));
+    }
+
   return (
     <motion.section className='scroll-mt-28 mb-28 sm:mb-28 w-[min(100%,38rem)] text-center'
     id='contact'
