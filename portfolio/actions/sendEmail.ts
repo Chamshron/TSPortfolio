@@ -1,27 +1,21 @@
 "use server";
 
-import { motionValue } from "framer-motion";
+import { validateString } from "@/lib/utilities";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const validateString = (value: unknown) => {
-    if (!value || typeof motionValue !== "string"){
-        return false;
-    }
-    return true;
-}
 
 export const sendEmail = async (formData : FormData) => {
 
     const message = formData.get('senderMessage');
     const email = formData.get('senderEmail');
 
-    if (validateString(email)){
+    if (validateString(email, 500)){
         return{
             error: "Woops! invalid email friend"
         }
     }
-    if(validateString(message)){
+    if(validateString(message, 5000)){
         return{
             error: "Woops! Invalid message friend"
         }
