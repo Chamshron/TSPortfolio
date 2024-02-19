@@ -25,12 +25,20 @@ export default function Contact() {
     >
         <h2 className='font-medium text-3xl mb-3 text-center'>Contact Me</h2>
         <p className=' text-gray-700'>Please contact me directly at <a className='underline' href='mailto:emmacameron219@gmail.com'>emmacameron219@gmail.com</a>  or through this form.</p>
-        <form className=' flex flex-col mt-10'>
+        <form className=' flex flex-col mt-10'
+        action={formData => {
+            console.log(formData);
+        }}
+        >
             <input className=' px-4 h-14 rounded-lg border border-black/10' 
             type='email'
+            required
+            maxLength={500}
             placeholder='Your Email Here' />
             <textarea className=' px-4 h-52 my-3 p-4 rounded-lg border border-black/10'
             placeholder='Your Message '
+            required
+            maxLength={500}
              />
             <button className=' group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-allfocus:scale-110 hover:scale-110 active:scale-105' 
             type='submit'
