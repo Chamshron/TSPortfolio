@@ -7,7 +7,7 @@ import {motion} from "framer-motion";
 export default function Contact() {
     const {ref} = useSectionInView("Contact");
 
-    const senderEmail = async (formData : FormData) => {
+    const sendEmail = async (formData : FormData) => {
         "use server";
         console.log("Running on server");
         console.log(formData.get("senderEmail"));
@@ -34,9 +34,11 @@ export default function Contact() {
         <h2 className='font-medium text-3xl mb-3 text-center'>Contact Me</h2>
         <p className=' text-gray-700'>Please contact me directly at <a className='underline' href='mailto:emmacameron219@gmail.com'>emmacameron219@gmail.com</a>  or through this form.</p>
         <form className=' flex flex-col mt-10'
-        action={formData => {
+        action={ async (formData) => {
+            console.log("Running on client")
             console.log(formData.get("senderEmail"));
             console.log(formData.get("senderMessage"));
+            sendEmail(formData);
         }}
         >
             <input className=' px-4 h-14 rounded-lg border border-black/10' 
