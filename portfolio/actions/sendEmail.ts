@@ -1,31 +1,44 @@
 "use server";
 
-import { validateString } from "@/lib/utilities";
+import React from "react";
 import { Resend } from "resend";
+import { validateString, getErrorMessage } from "@/lib/utilities";
+import ContactFormEmail from "@/emails/contact-form-email";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export const sendEmail = async (formData : FormData) => {
-
-    const message = formData.get('senderMessage');
-    const email = formData.get('senderEmail');
-
-    if (validateString(email, 500)){
-        return{
-            error: "Woops! invalid email friend"
-        }
-    }
-    if(validateString(message, 5000)){
-        return{
-            error: "Woops! Invalid message friend"
-        }
-    }
-
-    resend.emails.send({
-        from: "onboarding@resend.dev",
-        to: 'emmacameron219@gmail.com',
-        subject: 'Message from contact form',
-        reply_to: email as string,
-        text: message as string,
+export const sendEmail = async (formData: FormData) => {
+  const senderEmail = formData.get("senderEmail");
+  const senderMessage = formData.get("senderMessage");
+  if (!validateString(senderEmail, 500)) {
+    return {
+      error: "Invalid sender email",
+    };
+  }
+  if (!validateString(senderMessage, 5000)) {
+    return {
+      error: "Invalid message",
+    };
+  }
+  let data;
+  try {
+    data = await resend.emails.send({
+      from: "Contact Form <onboarding@resend.dev>",
+      to: "emmacameron219@gmail.com",
+      subject: "Message from portfolio contact form",
+      reply_to: senderEmail as string,
+      react: React.createElement(ContactFormEmail, {
+        senderMessage: senderMessage,
+        senderEmail: senderEmail,
+      }),
     });
-}
+  } catch (error: unknown) {
+    return {
+      error: getErrorMessage(error),
+    };
+  }
+
+  return {
+    data,
+  };
+};
