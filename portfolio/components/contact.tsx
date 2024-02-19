@@ -3,6 +3,7 @@ import React from 'react';
 import { useSectionInView } from '@/lib/hooks';
 import { FaPaperPlane } from 'react-icons/fa';
 import {motion} from "framer-motion";
+import {sendEmail} from "@/actions/sendEmail";
 
 export default function Contact() {
     const {ref} = useSectionInView("Contact");
@@ -35,10 +36,7 @@ export default function Contact() {
         <p className=' text-gray-700'>Please contact me directly at <a className='underline' href='mailto:emmacameron219@gmail.com'>emmacameron219@gmail.com</a>  or through this form.</p>
         <form className=' flex flex-col mt-10'
         action={ async (formData) => {
-            console.log("Running on client")
-            console.log(formData.get("senderEmail"));
-            console.log(formData.get("senderMessage"));
-            sendEmail(formData);
+            await sendEmail(formData);
         }}
         >
             <input className=' px-4 h-14 rounded-lg border border-black/10' 
