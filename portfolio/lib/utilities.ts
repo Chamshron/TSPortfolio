@@ -15,7 +15,7 @@ export const getErrorMessage = (error: unknown): string => {
     } else if (typeof error === "string") {
       message = error;
     } else {
-      message = "Something went wrong";
+      message = "Uh Oh! :( Something went wrong";
     }
   
     return message;
