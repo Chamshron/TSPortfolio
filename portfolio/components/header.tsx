@@ -7,6 +7,7 @@ import clsx from 'clsx';
 import { useActiveSectionContext } from '@/context/active-section-context';
 
 
+
 export default function Header() {
     const {activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
     
@@ -37,8 +38,6 @@ export default function Header() {
                         layoutId='activeSection'
                         initial={{
                             type:"spring",
-                            stiffness: 380,
-                            damping:30,
                         }}
                         ></motion.span>
                         )}
