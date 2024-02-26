@@ -67,22 +67,22 @@ const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
             }}
             >
                 <Link href="#contact"
-                className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 hover:bg-950 active:scale-105 transition'
+                className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 hover:bg-950 active:scale-105 transition dark:bg-white/10'
                 onClick={() => {
                     setActiveSection("Contact")
                     setTimeOfLastClick(Date.now());
                 }}>
                     Contact me here<BsArrowRight className=' opacity-70 group-hover:translate-x-1 transition' />{" "}</Link>
-                <a className=' group bg-white text-black px-7 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition border border-black/10'
+                <a className=' group bg-white text-black px-7 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition border border-black/10 dark:bg-white/10 dark:text-white'
                 href='/EmmaCameron_Resume.pdf'
                 download
-                >Download CV <HiDownload className=' opacity-70 group-hover:translate-y-1 transition' /> {" "}</a>  
+                >Download CV <HiDownload className=' opacity-70 group-hover:translate-y-1 transition dark:text-white' /> {" "}</a>  
                 <a
-                className=' bg-white text-gray-900 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition border border-black/10 hover:text-gray-950' 
+                className=' bg-white text-gray-900 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition border border-black/10 hover:text-gray-950 dark:bg-white/10 dark:text-white' 
                 href='https://linkedin.com/in/emma-cameron-范恩茗）-54b671192' target='_blank'
                 ><BsLinkedin /></a>
                 <a
-                className=' bg-white text-gray-900 p-4 flex items-center gap-2 rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition border border-black/10 hover:text-gray-950' 
+                className=' bg-white text-gray-900 p-4 flex items-center gap-2 rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition border border-black/10 hover:text-gray-950 dark:bg-white/10 dark:text-white' 
                 href='https://github.com/Chamshron'
                 target='_blank'
                 ><FaGithubSquare /></a>  
