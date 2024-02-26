@@ -33,6 +33,7 @@ export default function Contact() {
         <form className=' flex flex-col mt-10 dark:text-black'
         action={ async formData => {
             const { data, error} = await sendEmail(formData);
+
             if(error){
                 toast.error(error);
                 return;
@@ -49,7 +50,7 @@ export default function Contact() {
             />
 
             <textarea className=' px-4 h-52 my-3 p-4 rounded-lg border border-black/10 dark:bg-white/80 dark:focus:bg-white/100'
-            name='senderMessage'
+            name='message'
             placeholder='Your Message '
             required
             maxLength={5000}

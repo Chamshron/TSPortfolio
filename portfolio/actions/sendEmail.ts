@@ -9,13 +9,14 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
-  const senderMessage = formData.get("senderMessage");
+  const message = formData.get("senderMessage");
+
   if (!validateString(senderEmail, 500)) {
     return {
       error: "Invalid sender email",
     };
   }
-  if (!validateString(senderMessage, 5000)) {
+  if (!validateString(message, 5000)) {
     return {
       error: "Invalid message",
     };
@@ -28,8 +29,8 @@ export const sendEmail = async (formData: FormData) => {
       subject: "Message from portfolio contact form",
       reply_to: senderEmail as string,
       react: React.createElement(ContactFormEmail, {
-        senderMessage: senderMessage,
-        senderEmail: senderEmail,
+        message: message as string,
+        senderEmail: senderEmail as string,
       }),
     });
   } catch (error: unknown) {
