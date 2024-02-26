@@ -28,9 +28,9 @@ export default function Contact() {
     }}
     >
         <h2 className='font-medium text-3xl mb-3 text-center'>Contact Me</h2>
-        <p className=' text-gray-700'>Please contact me directly at <a className='underline' href='mailto:emmacameron219@gmail.com'>emmacameron219@gmail.com</a>  or through this form.</p>
+        <p className=' text-gray-700 dark:text-white/70'>Please contact me directly at <a className='underline' href='mailto:emmacameron219@gmail.com'>emmacameron219@gmail.com</a>  or through this form.</p>
 
-        <form className=' flex flex-col mt-10'
+        <form className=' flex flex-col mt-10 dark:text-black'
         action={ async formData => {
             const { data, error} = await sendEmail(formData);
             if(error){
@@ -40,7 +40,7 @@ export default function Contact() {
                 toast.success("Thanks! Email sent successfully")
         }}
         >
-            <input className=' px-4 h-14 rounded-lg border border-black/10' 
+            <input className=' px-4 h-14 rounded-lg border border-black/10 dark:bg-white/80 dark:focus:bg-white/100' 
             name='senderEmail'
             type='email'
             required
@@ -48,7 +48,7 @@ export default function Contact() {
             placeholder='Your Email Here'
             />
 
-            <textarea className=' px-4 h-52 my-3 p-4 rounded-lg border border-black/10'
+            <textarea className=' px-4 h-52 my-3 p-4 rounded-lg border border-black/10 dark:bg-white/80 dark:focus:bg-white/100'
             name='senderMessage'
             placeholder='Your Message '
             required
