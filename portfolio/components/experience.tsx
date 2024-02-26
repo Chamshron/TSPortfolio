@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import {
     VerticalTimeline,
      VerticalTimelineElement,
@@ -7,9 +7,12 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
+import { useTheme } from "@/context/theme-context";
+
 
 export default function Experience() {
     const {ref} = useSectionInView("Experience");
+    const { theme } = useTheme();
 
   return (
     <section className='scroll-mt-28 mb-28 sm:mb-40'
@@ -23,7 +26,7 @@ export default function Experience() {
                     key={index}
                     visible={true}
                     contentStyle={{
-                        background:"#ffffff",
+                        background: theme === 'light' ? "#ffffff" : "rgba(255, 255, 255, 0.05)",
                         boxShadow: "none",
                         border: "1px solid rgba(0, 0, 0, 0.05)",
                         textAlign: "left",

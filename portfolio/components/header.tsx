@@ -24,8 +24,8 @@ export default function Header() {
                     initial={{ y: -100, opacity: 0}}
                     animate={{y: 0, opacity: 1}}
                     key={link.hash}>
-                        <Link className={clsx('flex w-full items-center justify-center px-3 py-3 hover:text-indigo-950 transition hover:font-bold dark:text-gray-500 dark:hover-gray-300',
-                         {"text-gray-950 dark:text-gray-200": activeSection === link.name})}
+                        <Link className={clsx('flex w-full items-center justify-center px-3 py-3 hover:text-indigo-950 transition hover:font-bold dark:text-gray-200 dark:hover-gray-300',
+                         {"text-gray-950 dark:text-white": activeSection === link.name})}
                         href={link.hash}
                         onClick={()=> {
                             setActiveSection(link.name)
@@ -33,7 +33,7 @@ export default function Header() {
                         }}
                         >
                         {link.name}
-                        {link.name === activeSection && (<motion.span className=' bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-600'
+                        {link.name === activeSection && (<motion.span className=' bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-600 dark:text-gray-100'
                         layoutId='activeSection'
                         initial={{
                             type:"spring",
