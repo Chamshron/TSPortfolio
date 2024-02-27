@@ -9,7 +9,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
-  const message = formData.get("senderMessage");
+  const message = formData.get("message");
 
   if (!validateString(senderEmail, 500)) {
     return {
@@ -21,16 +21,17 @@ export const sendEmail = async (formData: FormData) => {
       error: "Invalid message",
     };
   }
+
   let data;
   try {
     data = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
-      to: "emmacameron219@gmail.com",
-      subject: "Message from portfolio contact form",
-      reply_to: senderEmail as string,
+      to: "bytegrad@gmail.com",
+      subject: "Message from contact form",
+      reply_to: senderEmail,
       react: React.createElement(ContactFormEmail, {
-        message: message as string,
-        senderEmail: senderEmail as string,
+        message: message,
+        senderEmail: senderEmail,
       }),
     });
   } catch (error: unknown) {
