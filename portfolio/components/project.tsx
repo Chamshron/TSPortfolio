@@ -36,6 +36,9 @@ export default function Project({
                     ))}
                 </ul>
             </div>
+            <a 
+            href={githubURL}
+            target='_blank'>
             <Image
             src={imageUrl}
             alt='Project I have worked on'
@@ -53,6 +56,7 @@ export default function Project({
 
         group-even:right-[initial] group-even:-left-40"
             />
+            </a>
         </section>
     </motion.div>
   )
