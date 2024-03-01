@@ -1,6 +1,6 @@
 <img width="779" alt="image" src="https://github.com/Chamshron/TSPortfolio/assets/139380629/37ecf532-6668-40b0-bc2a-31b98f19f3ed">
 
-TypeScript Portfolio Website
+**TypeScript Portfolio Website**
 
 **Aim:**
 To create a Typescript portfolio website where an user can download my CV, access import links such as my Github/LinkedIn, access projects I have previously worked on, and be able to send me an email.
