@@ -8,7 +8,7 @@ To create a Typescript portfolio website where an user can download my CV, acces
 **Goals:**
 1. Learn more about Typescript
 2. Learn more about Tailwind CSS and how screensize influences styling
-3. Learn more about animation with Framer Motion [Header with Intro Animation]
+3. Learn more about animation with Framer Motion [header with Intro Animation]
 4. Learn more about React email and Resend to have a working email form
 5. Learn more about hosting [using Vercel hosting]
 
