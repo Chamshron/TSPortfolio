@@ -30,6 +30,9 @@ To create a Typescript portfolio website where an user can download my CV, acces
 1. Add RESEND_API_KEY environment variable in .env.local (Resend)
 2. In the actions/send-email.ts file, change the "to" email to your own email
 
+**Testing**
+Using Cypress to improve my testing skills and ensure that the webpage functioning as intended.
+
 **Get the App Running:**
 1. Within the portfolio folder, type into the terminal:npm install
 2. Run the application npm run dev
