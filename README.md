@@ -24,4 +24,5 @@ Get the App Running:
 
 **Selenium IDE Testing**
 1. I've installed the Selenium IDE extension and am trying to have it use the contact email form; I'm able to successfully receive an email from this test.
+
    1.1 Selenium appears to allow multiple windows, when a link opens into a new tab, which Cypress doesn't appear to allow.
