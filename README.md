@@ -19,3 +19,7 @@ What I've Learned:
 Get the App Running:
 1. Within the portfolio folder, type into the terminal:npm install
 2. Run the application npm run dev
+
+**Cypress Testing**
+
+**Selenium IDE Testing**
